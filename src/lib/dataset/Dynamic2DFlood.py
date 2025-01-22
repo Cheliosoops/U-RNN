@@ -116,7 +116,7 @@ class Dynamic2DFlood(data.Dataset):
         # Extract and convert data into tensors
         # Convert from meters to millimeters
         absolute_DEM = torch.from_numpy(
-            event_data["absolute_DEM"]).float() * 1000
+            event_data["absolute_DSM"]).float() * 1000
         impervious = torch.from_numpy(event_data["impervious"]).float()
         manhole = torch.from_numpy(event_data["manhole"]).float()
         rainfall = torch.from_numpy(event_data["rainfall"]).float()
